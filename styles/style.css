@@ -137,6 +137,18 @@
   color: var(--title-and-background-color);
 }
 
+.text__article-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 23.4px;
+}
+
+.title-decor_modification {
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 .text {
   margin-top: 40px;
 }
@@ -150,6 +162,7 @@
 
 .text__record {
   color: var(--text-color);
+  line-height: 23.4px;
 }
 
 .text__concentrate-block {
@@ -174,4 +187,44 @@
 .text__concentration-article {
   display: grid;
   gap: 10px;
+}
+
+.text__gold-fish-article .text__article-title {
+  margin-top: 20px;
+}
+
+.text__link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--accent-color);
+}
+
+.text__link:hover {
+  text-decoration: underline;
+}
+
+.text__link:focus {
+  outline: none;
+}
+
+.text__link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 50px;
+  row-gap: 10px;
+}
+
+.gallery__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 23.4px;
+}
+
+.gallery__picture {
+  width: 100%;
+  height: auto; 
+  object-fit: cover;
 }
