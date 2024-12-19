@@ -2,6 +2,7 @@
 
 .page {
   margin: 10px;
+  margin-bottom: 0;
   background-color: var(--title-and-background-color);
 }
 
@@ -214,6 +215,7 @@
   display: grid;
   grid-template-columns: 1fr;
   margin-top: 50px;
+  margin-bottom: 40px;
   row-gap: 10px;
 }
 
@@ -227,4 +229,31 @@
   width: 100%;
   height: auto; 
   object-fit: cover;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: 668px;
+}
+
+.footer__title {
+  color: var(--main-title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
+.footer.decorated-zone::before {
+  top: 10px;
+  right: 0;
+}
+
+.footer.decorated-zone::after {
+  bottom: 10px;
+  left: 0;
 }
