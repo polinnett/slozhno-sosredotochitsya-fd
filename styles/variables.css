@@ -8,4 +8,6 @@
   --title-and-background-color: #000028;
   --text-color: #f1b2ce;
   --main-title-color: #db00ff;
+  --main-font: 'IBM Plex Mono', sans-serif;
+  --background-img: url("../images/cover-image-dark.png");
 }

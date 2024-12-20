@@ -1,18 +1,15 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-/* TODO: разобраться с блоком в шапке (внешние отступы) */
+/* TODO: разобраться с розовым блоком в шапке (внешние отступы) */
 
 .page {
   margin: 10px;
   margin-bottom: 0;
   background-color: var(--title-and-background-color);
-}
-
-.header__img {
-  margin: -10px;
-  background-image: url("../images/cover-image-dark.png");
+  background-image: var(--background-img), url("../images/cover-image-dark.png");
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center;
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -28,8 +25,8 @@
 }
 
 .decorated-zone::before {
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 0;
   width: 25px;
   height: 25px;
   border-top: 1px solid var(--accent-color);
@@ -37,8 +34,8 @@
 }
 
 .decorated-zone::after {
-  bottom: 10px;
-  left: 10px;
+  bottom: 20px;
+  left: 0;
   width: 25px;
   height: 25px;
   border-bottom: 1px solid var(--accent-color);
@@ -51,7 +48,6 @@
   grid-template-rows: 1fr 1fr 1fr;
   height: 100vh;
   min-height: 668px;
-  padding: 10px;
 }
 
 .header__decorative-element {
@@ -60,8 +56,8 @@
   line-height: 25px;
   letter-spacing: 0;
   position: absolute;
-  top: 10px;
-  right: 19px;
+  top: 0;
+  right: 9px;
 }
 
 .header__decorative-element::after {
@@ -192,6 +188,10 @@
   gap: 10px;
 }
 
+.text__gold-fish-block {
+  display: grid;
+}
+
 .text__gold-fish-article .text__article-title {
   margin-top: 20px;
 }
@@ -260,10 +260,14 @@
   left: 0;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 768px) {
   .page {
     margin: 20px;
     margin-bottom: 0;
+  }
+
+  .decorated-zone::after {
+    bottom: 40px;
   }
 
   .header__img {
@@ -272,22 +276,6 @@
 
   .header {
     min-height: 1024px;
-    padding: 20px;
-  }
-
-  .decorated-zone::before {
-    top: 20px;
-    right: 20px;
-  }
-
-  .decorated-zone::after {
-    bottom: 20px;
-    left: 20px;
-  }
-
-  .header__decorative-element {
-    top: 20px;
-    right: 29px;
   }
 
   .header__theme-menu-list {
@@ -295,7 +283,7 @@
   }
 
   .header__title {
-    margin-top: 115px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .aligned-text {
@@ -307,14 +295,6 @@
     margin-top: 40px;
     margin-bottom: 0;
     inline-size: 364px;
-  }
-
-  .text__title {
-
-  }
-  
-  .text__article-title {
-
   }
   
   .title-decor_modification {
@@ -340,5 +320,47 @@
 
   .text__concentrate-article:last-of-type {
     grid-column: 2 / 3;
+  }
+
+  .text__concentration-block {
+    grid-template-columns: 1fr;
+    margin-bottom: 80px;
+  }
+
+  .text__concentration-title {
+    width: min-content;
+  }
+  
+  .text__concentration-article {
+    display: grid;
+    gap: 10px;
+  }
+
+  .text__gold-fish-block {
+    grid-template-columns: 1fr 2fr;
+  }
+  
+  .text__gold-fish-article .text__article-title {
+    margin-top: 0;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 79px;
+    margin-bottom: 40px;
+    row-gap: 10px;
+  }
+  
+  .gallery__title {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 23.4px;
+  }
+  
+  .gallery__picture {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
   }
 }
