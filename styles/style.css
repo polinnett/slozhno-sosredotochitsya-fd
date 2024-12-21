@@ -1,7 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-/* TODO: разобраться с розовым блоком в шапке (внешние отступы) */
-
 .page {
   margin: 10px;
   margin-bottom: 0;
@@ -113,7 +111,7 @@
   line-height: 82.5%;
   letter-spacing: 0;
   font-weight: bold;
-  margin-top: 65px;
+  margin-top: 7px;
 }
 
 .aligned-text {
@@ -124,8 +122,7 @@
   font-weight: bold;
   line-height: 23.4px;
   letter-spacing: 0.005em;
-  margin-top: 55px;
-  margin-bottom: 66px;
+  margin-top: 30px;
   block-size: 117px;
   inline-size: 355px;
   justify-self: end;
@@ -140,6 +137,7 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 23.4px;
+  letter-spacing: 0.005em;
   color: var(--text-title-color);
 }
 
@@ -156,12 +154,13 @@
 }
 
 .text {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .text__record {
   color: var(--text-color);
   line-height: 23.4px;
+  letter-spacing: 0.005em;
 }
 
 .text__concentrate-block {
@@ -257,13 +256,13 @@
 }
 
 .footer.decorated-zone::before {
-  top: 10px;
-  right: 0;
+  top: 9px;
+  right: 1px;
 }
 
 .footer.decorated-zone::after {
-  bottom: 10px;
-  left: 0;
+  bottom: 11px;
+  left: 1px;
 }
 
 @media (min-width: 768px) {
@@ -290,6 +289,8 @@
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-top: 103px;
+    margin-left: -20px;
   }
 
   .aligned-text {
@@ -298,8 +299,7 @@
   }
 
   .header__description {
-    margin-top: 40px;
-    margin-bottom: 0;
+    margin-top: 22px;
     inline-size: 364px;
   }
   
@@ -310,7 +310,7 @@
   }
   
   .text {
-    margin-top: 60px;
+    margin-top: 40px;
   }
   
   .text__concentrate-block {
@@ -333,12 +333,20 @@
     margin-bottom: 80px;
   }
 
+  .text__concentration-block .text__record {
+    letter-spacing: 0;
+  }
+
   .text__concentration-title {
     width: min-content;
   }
 
   .text__gold-fish-block {
     grid-template-columns: 1fr 2fr;
+  }
+
+  .text__gold-fish-block .text__record {
+    letter-spacing: 0.02em;
   }
   
   .text__gold-fish-article .text__article-title {
@@ -416,14 +424,28 @@
     margin-top: 43px;
   }
 
+  .aligned-text {
+    margin-right: 94px;
+  }
+
   .header__description {
     block-size: 71px;
     inline-size: 491px;
+    margin-top: 31px;
+    letter-spacing: 0;
+  }
+
+  .text__concentrate-block .text__record {
+    letter-spacing: -0.005em;
   }
 
   .text__concentration-block {
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 80px;
+  }
+
+  .text__concentration-block .text__record {
+    letter-spacing: 0;
   }
 
   .text__concentration-title {
@@ -435,6 +457,10 @@
     display: grid;
     gap: 10px;
     grid-template-rows: min-content auto;
+  }
+
+  .text__gold-fish-block .text__record{
+    letter-spacing: 0.01em;
   }
 
   .footer {
