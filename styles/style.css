@@ -5,9 +5,9 @@
   margin-bottom: 0;
   background-color: var(--background-color);
   background-image: var(--background-img), url("../images/cover-image-dark.png");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -459,7 +459,7 @@
     grid-template-rows: min-content auto;
   }
 
-  .text__gold-fish-block .text__record{
+  .text__gold-fish-block .text__record {
     letter-spacing: 0.01em;
   }
 
