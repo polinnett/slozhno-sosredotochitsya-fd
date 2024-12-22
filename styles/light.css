@@ -16,6 +16,7 @@
   --text-title-color: #353430;
   --main-title-color: #ffc2e6;
   --button-color: #353430;
+  --button-hover-color: rgba(50, 49, 45, 0.4);
   --decoration-color: #353430;
   --background-img: url("../images/cover-image-light.png");
 }
@@ -29,6 +30,7 @@
     --text-title-color: #353430;
     --main-title-color: #ffc2e6;
     --button-color: #353430;
+    --button-hover-color: rgba(50, 49, 45, 0.4);
     --decoration-color: #353430;
     --background-img: url("../images/cover-image-light.png");   
   }
