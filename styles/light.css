@@ -17,7 +17,6 @@
   --main-title-color: #ffc2e6;
   --button-color: #353430;
   --decoration-color: #353430;
-  --main-font: 'IBM Plex Mono', sans-serif;
   --background-img: url("../images/cover-image-light.png");
 }
 
@@ -31,7 +30,6 @@
     --main-title-color: #ffc2e6;
     --button-color: #353430;
     --decoration-color: #353430;
-    --main-font: 'IBM Plex Mono', sans-serif;
     --background-img: url("../images/cover-image-light.png");   
   }
 
