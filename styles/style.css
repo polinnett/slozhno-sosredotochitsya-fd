@@ -1,7 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  margin: 10px;
   margin-bottom: 0;
   background-color: var(--background-color);
   background-image: var(--background-img), url("../images/cover-image-dark.png");
@@ -23,8 +22,8 @@
 }
 
 .decorated-zone::before {
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   width: 25px;
   height: 25px;
   border-top: 1px solid var(--decoration-color);
@@ -32,8 +31,8 @@
 }
 
 .decorated-zone::after {
-  bottom: 20px;
-  left: 0;
+  bottom: 10px;
+  left: 10px;
   width: 25px;
   height: 25px;
   border-bottom: 1px solid var(--decoration-color);
@@ -42,6 +41,7 @@
 
 .header {
   display: grid;
+  padding: 10px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr min-content;
   height: 100vh;
@@ -54,8 +54,8 @@
   line-height: 25px;
   letter-spacing: 0;
   position: absolute;
-  top: 0;
-  right: 9px;
+  top: 10px;
+  right: 19px;
 }
 
 .header__decorative-element::after {
@@ -111,7 +111,7 @@
   line-height: 82.5%;
   letter-spacing: 0;
   font-weight: bold;
-  margin-top: -7px;
+  margin-top: -8px;
 }
 
 .aligned-text {
@@ -122,7 +122,7 @@
   font-weight: bold;
   line-height: 23.4px;
   letter-spacing: 0.005em;
-  margin-bottom: 76px;
+  margin-bottom: 56px;
   inline-size: 355px;
   justify-self: end;
 }
@@ -130,6 +130,10 @@
 .title-decor {
   background-color: var(--accent-color);
   color: var(--title-color);
+}
+
+.main {
+  padding: 0 10px;
 }
 
 .text__title {
@@ -163,7 +167,7 @@
   grid-template-columns: 1fr;
   gap: 20px;
   margin-bottom: 50px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .text__concentrate-block-wrapper {
@@ -190,6 +194,7 @@
 
 .text__gold-fish-block {
   display: grid;
+  gap: 20px;
 }
 
 .text__gold-fish-article .text__article-title {
@@ -216,7 +221,7 @@
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 50px;
+  margin-top: 48px;
   margin-bottom: 40px;
   row-gap: 10px;
 }
@@ -243,6 +248,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
   height: 100vh;
   min-height: 668px;
 }
@@ -256,32 +262,29 @@
   font-weight: bold;
 }
 
-.footer.decorated-zone::before {
-  top: 9px;
-  right: 1px;
-}
-
-.footer.decorated-zone::after {
-  bottom: 11px;
-  left: 1px;
-}
-
 @media (min-width: 768px) {
-  .page {
-    margin: 20px;
-    margin-bottom: 0;
-  }
-
-  .decorated-zone::after {
-    bottom: 40px;
-  }
-
   .header__img {
     margin: -20px;
   }
 
   .header {
     min-height: 1024px;
+    padding: 20px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .header__decorative-element {
+    top: 20px;
+    right: 29px;
   }
 
   .header__theme-menu-list {
@@ -300,7 +303,7 @@
   }
 
   .header__description {
-    margin-bottom: 203px;
+    margin-bottom: 164px;
     inline-size: 364px;
   }
   
@@ -309,12 +312,16 @@
     margin-top: 20px;
     margin-bottom: 10px;
   }
+
+  .main {
+    padding: 0 20px;
+  }
   
   .text__concentrate-block {
     grid-template-columns: 1fr 2fr;
     gap: 20px;
     margin-bottom: 80px;
-    margin-top: 40px;
+    margin-top: 60px;
   }
   
   .text__concentrate-article {
@@ -337,6 +344,7 @@
 
   .text__gold-fish-block {
     grid-template-columns: 1fr 2fr;
+    gap: 0;
   }
 
   .text__gold-fish-block-wrapper {
@@ -392,18 +400,11 @@
 
   .footer {
     min-height: 1024px;
+    padding: 20px;
   }
   
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-  
-  .footer.decorated-zone::before {
-    top: 20px;
-  }
-  
-  .footer.decorated-zone::after {
-    bottom: 20px;
   }
 }
 
@@ -428,8 +429,12 @@
 
   .header__description {
     inline-size: 491px;
-    margin-bottom: 155px;
+    margin-bottom: 115px;
     letter-spacing: 0;
+  }
+
+  .text__concentrate-block {
+    gap: 10px;
   }
 
   .text__concentrate-block .text__record {
@@ -437,7 +442,7 @@
   }
 
   .text__concentrate-block-wrapper {
-    margin-left: -7px;
+    margin-left: 0px;
   }
 
   .text__concentration-block {
